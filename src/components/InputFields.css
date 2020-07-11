@@ -1,9 +1,12 @@
 .inline-comp{
-    display: inline-block;
-    padding-left: 8px;
-    
+    display: inline-block;   
 }
 .margin-comp{
     margin-top: 8px;
 }
-
+.pf{
+    padding-left: 8px;
+}
+.mb{
+    margin-bottom: 8px;
+}

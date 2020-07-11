@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import ListItemExpenseComponent from "./ListItemExpenseComponent";
-import { List,Paper } from "@material-ui/core";
+import { List,Paper,Container } from "@material-ui/core";
 import InputFields from "./InputFields";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
@@ -9,12 +8,10 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 
-const initialListChck = [
-  
-];
 
 function ListExpense(props) {
-  const [initialList, setInitiallist] = useState(initialListChck);
+  const [initialList, setInitiallist] = useState([]);
+  let netAmount = 0;
 
   function handleClick(e, values) {
     var temp = [];
@@ -29,9 +26,11 @@ function ListExpense(props) {
   function setColor(e){
     let color = ""
     e.type=='+'?color='green':color='red'
+    e.type=='+'?netAmount=netAmount+parseInt(e.value):netAmount=netAmount-parseInt(e.value)
     return color
   }
   return (
+    <Container>
     <div className="card">
       <InputFields click={handleClick}></InputFields>
       <TableContainer component={Paper}>
@@ -55,6 +54,7 @@ function ListExpense(props) {
       </Table>
       </TableContainer>
     </div>
+    </Container>
   );
 }
 

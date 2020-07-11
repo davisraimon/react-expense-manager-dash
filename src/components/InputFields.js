@@ -28,7 +28,7 @@ export default function InputFields(props) {
     setValue("");
   }
   return (
-    <div className="inline-comp">
+    <div className="mb">
       <div className="inline-comp">
         <TextField
           className="field-width"
@@ -40,7 +40,7 @@ export default function InputFields(props) {
           onChange={(e) => setType(e.target.value)}
         ></TextField>
       </div>
-      <div className="inline-comp">
+      <div className="inline-comp pf">
         <TextField
           className="inline-comp"
           variant="outlined"
@@ -51,7 +51,7 @@ export default function InputFields(props) {
           onChange={(e) => setDesc(e.target.value)}
         ></TextField>
       </div>
-      <div className="inline-comp">
+      <div className="inline-comp pf">
         <TextField
           className="field-width-value"
           variant="outlined"
@@ -61,7 +61,7 @@ export default function InputFields(props) {
           onChange={(e) => setValue(e.target.value)}
         ></TextField>
       </div>
-      <div className="inline-comp position-last">
+      <div className="inline-comp position-last pf">
         <Button onClick={handleClick}>
           <CheckCircleOutlineIcon className="padding-comp"></CheckCircleOutlineIcon>
         </Button>
