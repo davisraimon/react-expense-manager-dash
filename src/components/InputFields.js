@@ -9,21 +9,21 @@ export default function InputFields(props) {
   const [value, setValue] = useState("");
   const [type, setType] = useState("+");
 
-  function handleClick() {   
+  function handleClick() {
     if (!emptyCheck()) {
-      clearll() 
-      document.getElementById("desc").focus(); 
+      clearll();
+      document.getElementById("desc").focus();
       props.click([desc, value, type]);
     }
   }
   function emptyCheck() {
-    if ( desc && value && type) {
+    if (desc && value && type) {
       return false;
     } else {
       return true;
     }
   }
-  function clearll(){
+  function clearll() {
     setDesc("");
     setValue("");
   }

@@ -1,33 +1,56 @@
 .App {
   text-align: center;
 }
-
+.inline-comp {
+  display: inline-block;
+}
+.col-width {
+  min-width: 32.8%;
+  padding-right: 32px;
+  padding-left: 32px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
+.of-x {
+  overflow-x: scroll;
+  max-height: 300px;
+}
+.card-dim {
+  min-width: 100px;
+  min-height: 105px;
+}
+.typo-dim {
+  padding-top: 28px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.card-div-dim {
+  min-width: 100px;
+  min-height: 105px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-.column-attr{
+.column-attr {
   min-width: 32.5%;
 }
-.column-attr-center{
-  min-width: 36.5%;
+.column-attr-center {
+  min-width: 100%;
 }
 
-.card-c{
+.card-c {
   min-height: 64px !important;
   max-width: 64px;
 }
-.padding-c{
-  padding:16px;
+.padding-c {
+  padding: 16px;
 }
-.row{
-  display:flex;
+.row {
+  display: flex;
   min-height: 50%;
 }
 .App-header {
@@ -47,18 +70,17 @@
 .First-paper {
   min-height: 600px;
 }
-.field-width{
-width:37px;  
+.field-width {
+  width: 37px;
 }
-.field-width-small{
-  width:100px;  
-  }
-.field-width-value{
-  width:100px;
-}  
-.position-last{
+.field-width-small {
+  width: 100px;
+}
+.field-width-value {
+  width: 100px;
+}
+.position-last {
   position: absolute;
-
 }
 @keyframes App-logo-spin {
   from {

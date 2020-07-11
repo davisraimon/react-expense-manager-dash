@@ -1,14 +1,13 @@
-import React from 'react'
+import React from "react";
 import "../App.css";
-import {Card} from '@material-ui/core'
+import { Card, Typography } from "@material-ui/core";
 
-
-export default function ConsolidatedCards(props){
-
-    return(
-        <div className='padding-c'>
-        <h1>consolidated Net expenses</h1>
-        <Card>43000</Card>
-        </div>
-    )
+export default function ConsolidatedCards(props) {
+  return (
+    <Card className="card-dim">
+      <Typography className="typo-dim" variant="h4" component="h2">
+        {props.netAmount}
+      </Typography>
+    </Card>
+  );
 }
