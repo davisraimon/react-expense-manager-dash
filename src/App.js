@@ -1,9 +1,6 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import ListExpense from "./components/ListExpense";
-import { Paper, TextField, Container } from "@material-ui/core";
-import ConsolidatedCards from "./components/ConsolidatedCards";
 
 function App() {
   return (

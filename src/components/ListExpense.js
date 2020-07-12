@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { List, Paper, Container, Card } from "@material-ui/core";
+import { Paper } from "@material-ui/core";
 import InputFields from "./InputFields";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
@@ -28,13 +28,13 @@ function ListExpense(props) {
   }
   function setColor(e) {
     let color = "";
-    e.type == "+" ? (color = "green") : (color = "red");
-    e.type == "+"
+    e.type === "+" ? (color = "green") : (color = "red");
+    e.type === "+"
       ? (netAmount = netAmount + parseInt(e.value))
       : (netAmount = netAmount - parseInt(e.value));
-    e.type == "+"
+    e.type === "+"
       ? (netIncome = netIncome + parseInt(e.value))
-      : (netExpense = netExpense - parseInt(e.value));
+      : (netExpense = netExpense + parseInt(e.value));
     return color;
   }
   function setColorForCons() {
