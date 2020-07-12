@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { TextField, IconButton, Button } from "@material-ui/core";
+import React, { useState } from "react";
+import { TextField, Button } from "@material-ui/core";
 import CheckCircleOutlineIcon from "@material-ui/icons/CheckCircleOutline";
 import "./InputFields.css";
-import MenuItem from "@material-ui/core/MenuItem";
 
 export default function InputFields(props) {
   const [desc, setDesc] = useState("");
