@@ -12,7 +12,9 @@ import ConsolidatedCards from "./ConsolidatedCards";
 
 function ListExpense(props) {
   const [initialList, setInitiallist] = useState([]);
-  let netAmount = 0;
+  let netAmount = 0.0;
+  let netIncome = 0.0;
+  let netExpense = 0.0;
 
   function handleClick(e, values) {
     var temp = [];
@@ -30,6 +32,14 @@ function ListExpense(props) {
     e.type == "+"
       ? (netAmount = netAmount + parseInt(e.value))
       : (netAmount = netAmount - parseInt(e.value));
+    e.type == "+"
+      ? (netIncome = netIncome + parseInt(e.value))
+      : (netExpense = netExpense - parseInt(e.value));
+    return color;
+  }
+  function setColorForCons() {
+    let color = "";
+    netAmount >= 0 ? (color = "green") : (color = "red");
     return color;
   }
   return (
@@ -66,8 +76,22 @@ function ListExpense(props) {
             </TableContainer>
           </div>
         </div>
-        <div className="col-sm card-div-dim">
-          <ConsolidatedCards netAmount={netAmount}></ConsolidatedCards>
+        <div className="col-sm card-div-dim inline-comp">
+          <ConsolidatedCards
+            color={setColorForCons()}
+            title="Net Amount"
+            netAmount={netAmount}
+          ></ConsolidatedCards>
+          <ConsolidatedCards
+            color="red"
+            title="Expense Sum"
+            netAmount={netExpense}
+          ></ConsolidatedCards>
+          <ConsolidatedCards
+            color="green"
+            title="Returns Sum"
+            netAmount={netIncome}
+          ></ConsolidatedCards>
         </div>
       </div>
     </div>
