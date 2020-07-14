@@ -9,22 +9,46 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import "../App.css";
 import ConsolidatedCards from "./ConsolidatedCards";
+import Chart from "./Chart";
 
 function ListExpense(props) {
   const [initialList, setInitiallist] = useState([]);
+  const [labels, setLabels] = useState([]);
+  const [colors, setColors] = useState([]);
+  const [values, setValues] = useState([]);
+  const [labelsexpense, setLabelsexpense] = useState([]);
+  const [colorsexpense, setColorsexpense] = useState([]);
+  const [valuesexpense, setValuesexpense] = useState([]);
   let netAmount = 0.0;
   let netIncome = 0.0;
   let netExpense = 0.0;
 
   function handleClick(e, values) {
     var temp = [];
+    var tempColor =
+      "rgb(" +
+      Math.floor(Math.random() * 256) +
+      "," +
+      Math.floor(Math.random() * 256) +
+      "," +
+      Math.floor(Math.random() * 256) +
+      ")";
     temp = {
       id: initialList.length + 1,
       type: e[2],
       value: e[1],
       desc: e[0],
     };
-    setInitiallist((oldArry) => [...oldArry, temp]);
+    setInitiallist((oldArray) => [...oldArray, temp]);
+    if (e[2] === "+") {
+      setLabels((oldArray) => [...oldArray, e[0]]);
+      setValues((oldArray) => [...oldArray, e[1]]);
+      setColors((oldArray) => [...oldArray, tempColor]);
+    } else {
+      setLabelsexpense((oldArray) => [...oldArray, e[0]]);
+      setValuesexpense((oldArray) => [...oldArray, e[1]]);
+      setColorsexpense((oldArray) => [...oldArray, tempColor]);
+    }
   }
   function setColor(e) {
     let color = "";
@@ -92,6 +116,12 @@ function ListExpense(props) {
             title="Returns Sum"
             netAmount={netIncome}
           ></ConsolidatedCards>
+          <Chart labels={labels} colors={colors} values={values}></Chart>
+          <Chart
+            labels={labelsexpense}
+            colors={colorsexpense}
+            values={valuesexpense}
+          ></Chart>
         </div>
       </div>
     </div>
