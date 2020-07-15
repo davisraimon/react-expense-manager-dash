@@ -9,7 +9,6 @@ export default function ConsolidatedCards(props) {
         className="typo-dim"
         color="textSecondary"
         gutterBottom
-        style={{ color: `${props.color}` }}
       >
         {props.title}
       </Typography>
@@ -18,6 +17,7 @@ export default function ConsolidatedCards(props) {
         color="textSecondary"
         variant="h4"
         component="h2"
+        style={{ color: `${props.color}` }}
       >
         {props.netAmount}
       </Typography>
