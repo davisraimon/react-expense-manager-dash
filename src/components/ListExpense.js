@@ -109,17 +109,17 @@ function ListExpense(props) {
         <div className="col-sm card-div-dim inline-comp">
           <ConsolidatedCards
             color={setColorForCons()}
-            title="Net Amount"
+            title="Budget"
             netAmount={netAmount}
           ></ConsolidatedCards>
           <ConsolidatedCards
             color="red"
-            title="Expense Sum"
+            title="Expense"
             netAmount={netExpense}
           ></ConsolidatedCards>
           <ConsolidatedCards
             color="green"
-            title="Returns Sum"
+            title="Income"
             netAmount={netIncome}
           ></ConsolidatedCards>
           <Chart
