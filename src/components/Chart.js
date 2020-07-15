@@ -20,7 +20,7 @@ export default function Chart(props) {
         options={{
           title: {
             display: true,
-            text: "Expense Split",
+            text: props.title,
             fontSize: 20,
           },
           legend: {

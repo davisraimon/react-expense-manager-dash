@@ -15,15 +15,21 @@ function ListExpense(props) {
   const [initialList, setInitiallist] = useState([]);
   const [labels, setLabels] = useState([]);
   const [colors, setColors] = useState([]);
-  const [values, setValues] = useState([]);
+  const [values, setValues] = useState([-1]);
   const [labelsexpense, setLabelsexpense] = useState([]);
   const [colorsexpense, setColorsexpense] = useState([]);
-  const [valuesexpense, setValuesexpense] = useState([]);
+  const [valuesexpense, setValuesexpense] = useState([-1]);
   let netAmount = 0.0;
   let netIncome = 0.0;
   let netExpense = 0.0;
 
-  function handleClick(e, values) {
+  function handleClick(e) {
+    if (values[0] === -1 && e[2] === "+") {
+      setValues([]);
+    }
+    if (valuesexpense[0] === -1 && e[2] === "-") {
+      setValuesexpense([]);
+    }
     var temp = [];
     var tempColor =
       "rgb(" +
@@ -116,11 +122,17 @@ function ListExpense(props) {
             title="Returns Sum"
             netAmount={netIncome}
           ></ConsolidatedCards>
-          <Chart labels={labels} colors={colors} values={values}></Chart>
+          <Chart
+            labels={labels}
+            colors={colors}
+            values={values}
+            title="Income"
+          ></Chart>
           <Chart
             labels={labelsexpense}
             colors={colorsexpense}
             values={valuesexpense}
+            title="Expense"
           ></Chart>
         </div>
       </div>
