@@ -19,7 +19,7 @@ function App() {
         <div className="row">
           <div className="col-sm column-attr-center">
             <ListExpense></ListExpense>
-            <Document file="/sample.pdf" onLoadSuccess={readPDF} options={options}></Document>
+            {/* <Document file="/sample.pdf" onLoadSuccess={readPDF} options={options}></Document> */}
           </div>
         </div>
       </div>
