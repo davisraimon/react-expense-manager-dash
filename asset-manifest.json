@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-expense-manager-dash/static/css/main.ca763671.chunk.css",
+    "main.js": "/react-expense-manager-dash/static/js/main.8e3c0422.chunk.js",
+    "main.js.map": "/react-expense-manager-dash/static/js/main.8e3c0422.chunk.js.map",
+    "runtime-main.js": "/react-expense-manager-dash/static/js/runtime-main.1232947e.js",
+    "runtime-main.js.map": "/react-expense-manager-dash/static/js/runtime-main.1232947e.js.map",
+    "static/js/2.373b6aeb.chunk.js": "/react-expense-manager-dash/static/js/2.373b6aeb.chunk.js",
+    "static/js/2.373b6aeb.chunk.js.map": "/react-expense-manager-dash/static/js/2.373b6aeb.chunk.js.map",
+    "index.html": "/react-expense-manager-dash/index.html",
+    "precache-manifest.a48295bc8ff563f8c755176d37a7ec2b.js": "/react-expense-manager-dash/precache-manifest.a48295bc8ff563f8c755176d37a7ec2b.js",
+    "service-worker.js": "/react-expense-manager-dash/service-worker.js",
+    "static/css/main.ca763671.chunk.css.map": "/react-expense-manager-dash/static/css/main.ca763671.chunk.css.map",
+    "static/js/2.373b6aeb.chunk.js.LICENSE.txt": "/react-expense-manager-dash/static/js/2.373b6aeb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1232947e.js",
+    "static/js/2.373b6aeb.chunk.js",
+    "static/css/main.ca763671.chunk.css",
+    "static/js/main.8e3c0422.chunk.js"
+  ]
+}
