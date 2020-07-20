@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { TextField, Button } from "@material-ui/core";
 import CheckCircleOutlineIcon from "@material-ui/icons/CheckCircleOutline";
 import "./InputFields.css";
+import MenuItem from "@material-ui/core/MenuItem";
 
 export default function InputFields(props) {
   const [desc, setDesc] = useState("");
@@ -30,14 +31,20 @@ export default function InputFields(props) {
     <div className="mb">
       <div className="inline-comp">
         <TextField
-          className="field-width"
-          id="standard-select-currency"
           variant="outlined"
-          label=""
-          value={type}
           size="small"
+          id="standard-select-currency"
+          select
+          value={type}
           onChange={(e) => setType(e.target.value)}
-        ></TextField>
+        >
+          <MenuItem key="+" value="+">
+            +
+          </MenuItem>
+          <MenuItem key="-" value="-">
+            -
+          </MenuItem>
+        </TextField>
       </div>
       <div className="inline-comp pf">
         <TextField
@@ -52,6 +59,7 @@ export default function InputFields(props) {
       </div>
       <div className="inline-comp pf">
         <TextField
+          type="number"
           className="field-width-value"
           variant="outlined"
           label="₹"
